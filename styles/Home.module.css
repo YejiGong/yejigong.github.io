@@ -1,17 +1,26 @@
 .container {
-  padding: 0 2rem;
+  padding: 0 1rem;
+  font-family:'Nanum Gothic';
 }
 
 .main {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
+  min-height: 5vh;
+  padding: 2rem 0;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex:1;
 }
 
+.mainTitle {
+  font-weight:bolder;
+}
+.menus{
+  position:absolute;
+  right: 4rem;
+  display: flex;
+  flex-wrap:nowrap;
+  gap: 1rem;
+
+}
 .footer {
   display: flex;
   flex: 1;
