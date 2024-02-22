@@ -48,7 +48,7 @@ const Information = () => {
                 ))}
             </div>
             {informationVisible && (<div className={styles.information}>
-                <a href="https://github.com/YejiGong"><FaGithub /></a> | <a href="https://velog.io/@ydppwljg"><SiVelog /></a> | <a href="mailto:yejigong00@gmail.com"><IoMdMail /></a>
+                <a href="https://github.com/YejiGong" target="_blank"><FaGithub /></a> | <a href="https://velog.io/@ydppwljg" target="_blank"><SiVelog /></a> | <a target="_blank" href="mailto:yejigong00@gmail.com"><IoMdMail /></a>
                 
                 <br/>
                 <br/>
@@ -104,7 +104,7 @@ const Information = () => {
                                 </p>
                                 <p>Backend Engineer Intern (산학협력)</p>
                                 <p style={{fontSize:"12px"}}>2022.09 - 2022.12</p>
-                                <a href="https://velog.io/@ydppwljg/%EC%9D%B8%ED%84%B4-%ED%9A%8C%EA%B3%A0"><SiVelog /></a>
+                                <a target="_blank" href="https://velog.io/@ydppwljg/%EC%9D%B8%ED%84%B4-%ED%9A%8C%EA%B3%A0"><SiVelog /></a>
                             </div>
                             <div className={styles.line}></div>
                             <div style={{padding:"1rem",width:"70%"}}>
@@ -161,8 +161,8 @@ const Information = () => {
                                         <p className={styles.skill}>AWS</p>
                                         <p className={styles.skill}>Python</p>
                                     </div>
-                                    <a href="https://github.com/readubble/server"><FaGithub /></a>
-                                    &nbsp;<a href="https://velog.io/@ydppwljg/%EC%BA%A1%EC%8A%A4%ED%86%A4-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%9A%8C%EA%B3%A0"><SiVelog /></a>
+                                    <a target="_blank" href="https://github.com/readubble/server"><FaGithub /></a>
+                                    &nbsp;<a target="_blank" href="https://velog.io/@ydppwljg/%EC%BA%A1%EC%8A%A4%ED%86%A4-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%9A%8C%EA%B3%A0"><SiVelog /></a>
                                     
                                 </div>
                                 <div className={styles.line}></div>
@@ -202,9 +202,9 @@ const Information = () => {
                                     <p className={styles.skill}>AWS</p>
                                     <p className={styles.skill}>Python</p>
                                 </div>
-                                <a href="https://github.com/moeumi/backend"><FaGithub /></a>
-                                &nbsp;<a href="https://velog.io/@ydppwljg/%EC%95%B1-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%9A%8C%EA%B3%A0"><SiVelog /></a>
-                                &nbsp;<a href="https://play.google.com/store/apps/details?id=com.moeumi.client&hl=en-KR"><IoLogoGooglePlaystore /></a>
+                                <a target="_blank" href="https://github.com/moeumi/backend"><FaGithub /></a>
+                                &nbsp;<a target="_blank" href="https://velog.io/@ydppwljg/%EC%95%B1-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%9A%8C%EA%B3%A0"><SiVelog /></a>
+                                &nbsp;<a target="_blank" href="https://play.google.com/store/apps/details?id=com.moeumi.client&hl=en-KR"><IoLogoGooglePlaystore /></a>
                             </div>
                             <div className={styles.line}></div>
                             <div style={{padding:"1rem", lineHeight:"1.5em", width:"70%", alignSelf:"center"}}>
@@ -293,10 +293,10 @@ const Information = () => {
                         <span style={{fontSize:"19px"}}>{"<개발자를 위한 최소한의 실무 지식>"}<span style={{fontSize:"13px", fontStyle:"italic"}}>(김현정, 이재효 지음, 한빛미디어, 2024)</span> <strong>베타리딩</strong> 참여</span>
                         <p style={{fontSize:"15px", paddingBottom:"10px"}}>2023.12</p>
                         <p/><p/>
-                        <span style={{fontSize:"19px"}}>2021 Purdue University Summer Program <strong>온라인 해외 현장 교육</strong> 수료</span>
+                        <span style={{fontSize:"19px"}}>K-SW Square Purdue University<span style={{fontSize:"13px", fontStyle:"italic"}}>(Purdue Chung Ang Summer Program 2021)</span> <strong>온라인 해외 현장 교육</strong> 수료</span>
                         <p style={{fontSize:"15px"}}>UAV Ground Scanning System: Human Detection with Deep Learning
-                        &nbsp;<a href="https://drive.google.com/file/d/1ATu5tKMQXnqMCyMpwvU0ubk0XjJT5d8c/view?usp=sharing"><IoDocumentText /></a>
-                        &nbsp;<a href="https://github.com/AllisonShen/UAV"><FaGithub /></a></p>
+                        &nbsp;<a target="_blank" href="https://drive.google.com/file/d/1ATu5tKMQXnqMCyMpwvU0ubk0XjJT5d8c/view?usp=sharing"><IoDocumentText /></a>
+                        &nbsp;<a target="_blank" href="https://github.com/AllisonShen/UAV"><FaGithub /></a></p>
                         <p style={{fontSize:"15px",paddingBottom:"10px"}}>2021.07 - 2021.08</p>
                             
                     </div>

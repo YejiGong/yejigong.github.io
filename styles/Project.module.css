@@ -1,0 +1,105 @@
+.container{
+    padding:2rem 2rem;
+    display:flex;
+    min-height:120vh;
+    overflow-y:hidden;
+    flex-direction: column;
+}
+
+.category{
+    background:#b0e8ea;
+    border: none;
+    margin:3px;
+    padding-bottom:2px;
+    width:max-content;
+    height:20px;
+    text-align:center;
+    border-radius:5px;
+    font-family:'Nanum Gothic'
+}
+.categoryskill{
+    border: none;
+    margin:3px;
+    padding-bottom:2px;
+    width:max-content;
+    height:20px;
+    text-align:center;
+    border-radius:5px;
+    font-family:'Nanum Gothic'
+}
+.greetings{
+    font-weight:bolder;
+    font-size:30px;
+}
+
+.information{
+    padding: 2rem 0;
+}
+
+.introduce{
+    padding: 1rem 0;
+    display:flex;
+    align-items:stretch;
+    min-height:100vh;
+}
+
+.line{
+    border-right: 3px solid lightgray;
+    margin:30px 10px;
+}
+
+.sectionLeft{
+    padding:0 2rem;
+    font-weight:bold;
+    width:20%;
+    text-align:center;
+    min-width:200px;
+}
+
+.sectionTitle{
+    width:20%;
+    text-align:center;
+    font-weight:bold;
+    word-wrap:break-word;
+}
+
+.section{
+    display:flex;
+    align-items:center;
+    margin-top:1rem;
+}
+
+.bold{
+    font-weight:bold;
+    margin:5px 5px 10px 0px !important;
+}
+
+.content{
+    font-size:80%;
+    margin:5px 5px 15px 0px !important;
+}
+
+.skill{
+    background-color:#656565;
+    color:white;
+    padding:0.1rem 0.15rem;
+    border-radius:5px;
+    font-size:12px;
+    font-weight:400;
+    margin:3px;
+}
+.status{
+    background-color:#999999;
+    color:white;
+    padding:0.03rem 0.3rem;
+    position:relative;
+    bottom:3px;
+    border-radius:5px;
+    font-size:12px;
+    font-weight:400;
+}
+.highlight{
+    background-color:#b1dee380;
+    border-radius:2px;
+     margin:0.05rem;
+}

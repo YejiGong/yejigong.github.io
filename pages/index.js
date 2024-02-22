@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Information from './Information';
 import Projects from './Projects';
@@ -16,6 +16,7 @@ export default function Home() {
   }
 
   const renderContent = {Information: <Information/>, Projects:<Projects/>, Etc:<Etc/>}
+
   return (
     <div className={styles.container}>
       <Head>
