@@ -187,8 +187,8 @@ const Projects = () => {
             
                 <div className={styles.introduce}>
                     <div className={styles.sectionLeft}> 
-                        <div style={{position:"relative", top:`${topValue}px`,}}>
-                        <div style={{minWidth:"100px",  backgroundColor:"rgba(243,243,243,70)", borderRadius:"5px", padding:"20px 0px"}}>
+                        <div style={{position:"relative", top:`${topValue}px`, left:"-15px"}}>
+                        <div style={{minWidth:"150px",  backgroundColor:"rgba(243,243,243,70)", borderRadius:"5px", padding:"20px 0px"}}>
                             <div style={{textAlign:"center"}}>
                                 <span style={{fontSize:"15px"}}>🏷️ Filter</span>
                                 <p/>
@@ -221,14 +221,14 @@ const Projects = () => {
                         <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} style={{borderRadius:"50%", height:"35px", border:"0px"}}>Top</button>
                         </div>
                     </div>
-                    <div style={{width:"80%", marginLeft:"20px"}}>
+                    <div style={{flexGrow:"1", marginLeft:"20px", minWidth:"0", wordWrap:"break-word"}}>
                         {filteredProjects.map((project) => (
 
 
                             <div key={project.name} style={{marginTop:"3rem", display:"flex"}}>
                                 <div style={{width:"25%"}}>
                                     {project.image?(<img style={{width:"50%"}} src={project.image}/>):null}
-                                    <p style={{fontWeight:"bolder", fontSize:"25px", marginBottom:"1rem"}}>
+                                    <p style={{fontWeight:"bolder", fontSize:"25px", marginBottom:"1rem",wordWrap:"break-word"}}>
                                     {project.name}
                                     </p>
                                     <span className={styles.status}>{project.status}</span><br/>

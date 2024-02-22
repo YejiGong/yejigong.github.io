@@ -50,6 +50,7 @@ const Information = () => {
             {informationVisible && (<div className={styles.information}>
                 <a href="https://github.com/YejiGong" target="_blank"><FaGithub /></a> | <a href="https://velog.io/@ydppwljg" target="_blank"><SiVelog /></a> | <a target="_blank" href="mailto:yejigong00@gmail.com"><IoMdMail /></a>
                 
+                <i style={{fontSize:"12px"}}><p/>본 페이지는 PC 환경에 최적화되어있습니다.</i>
                 <br/>
                 <br/>
 
