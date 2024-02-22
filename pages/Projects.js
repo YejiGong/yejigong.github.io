@@ -225,7 +225,7 @@ const Projects = () => {
                         {filteredProjects.map((project) => (
 
 
-                            <div style={{marginTop:"3rem", display:"flex"}}>
+                            <div key={project.name} style={{marginTop:"3rem", display:"flex"}}>
                                 <div style={{width:"25%"}}>
                                     {project.image?(<img style={{width:"50%"}} src={project.image}/>):null}
                                     <p style={{fontWeight:"bolder", fontSize:"25px", marginBottom:"1rem"}}>
