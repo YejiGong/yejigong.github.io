@@ -8,14 +8,14 @@ import Projects from './Projects';
 import Etc from './Etc';
 
 export default function Home() {
-  const menus = ['Information', 'Projects', 'Etc'];
+  const menus = ['Information', 'Projects'];
   const [selectedMenu, setSelectedMenu] = useState('Information');
 
   const handleMenuClick = (menu) => {
     setSelectedMenu(menu);
   }
 
-  const renderContent = {Information: <Information/>, Projects:<Projects/>, Etc:<Etc/>}
+  const renderContent = {Information: <Information/>, Projects:<Projects/>}
 
   return (
     <div className={styles.container}>
@@ -25,7 +25,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.main}>
-        <div className={styles.mainTitle}>
+        <div className={styles.mainTitle} onClick={()=>handleMenuClick('Information')}>
           Portfolio
         </div>
         <div className={styles.menus}>
