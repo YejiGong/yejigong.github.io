@@ -62,7 +62,7 @@ const Information = () => {
                 <div className={styles.introduce}>
                     <div className={styles.sectionLeft}></div>
                     <div>
-                        <p>처음 printf("Hello, World!");를 작성했던 때부터 지금 현재까지 <i>개발이 <strong>가장 즐거운</strong>, 그래서 더 <strong>잘 하고싶은</strong> 개발자</i>입니다.</p>
+                        <p>처음 printf({"\"Hello, World!\""});를 작성했던 때부터 지금 현재까지 <i>개발이 <strong>가장 즐거운</strong>, 그래서 더 <strong>잘 하고싶은</strong> 개발자</i>입니다.</p>
                         <p className={styles.bold}>새로운 것을 접하고, 배우는 것을 즐거워하여 빠르게 적응하고 익혀서 사용할 수 있습니다.</p>
                         <p className={styles.content}>이러한 강점을 바탕으로 프로젝트 상황에 따른 적절한 언어, 프레임워크가 있다면 이전에 접해보지 않았더라도 두려워하지 않고 빠르게 익혀서 적용합니다.<br/>
                         실제로 이전에 접해보지 않았던 언어나 프레임워크를 빠르게 익혀서 프로젝트를 진행한 경험이 다수 있습니다.</p>
