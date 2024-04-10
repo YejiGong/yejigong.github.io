@@ -17,11 +17,15 @@ const projectsData=[
 
     {name:'bash-plus', image:'', team:'팀', type:'Web', part:'Backend', belong:'',status:'ing', projectDescription:'- 팀 프로젝트(5인)', contribution:'', date:'2024.02 - 현재', skills:['Spring Boot','Kotlin', 'PostgreSQL', 'Docker','k8s'],
     github:'https://github.com/ss-sum/bash-plus-server', blog:'', document:'', store:'',link:'', 
-    description:'개발자 컨퍼런스 영상을 모아서 볼 수 있는 서비스 <strong>bash-plus의 백엔드 개발</strong>을 진행하고 있습니다.'},
+    description:'개발자 컨퍼런스 영상을 모아서 볼 수 있는 서비스 <strong>bash-plus의 백엔드 개발</strong>을 진행하고 있습니다. <p/>'+
+    'API 개발을 담당하여 로그인, 영상 조회, 검색, 댓글 작성 등의 20여 개의 API를 개발하였습니다. 현재 버그 검증을 위한 테스트코드 작성 및 성능 개선을 위한 작업을 진행중입니다. <br/>'+
+    'Spring Security 6.1 버전을 기반으로 OAuth2+JWT 로그인을 구현했습니다. 최신 버전으로 업데이트되면서 많이 달라졌기 때문에, OAuth2LoginAuthenticationFilter 등의 내부 코드를 직접 확인하면서 작업했습니다. 이 과정을 통해 Spring Security 내부 동작과 구조를 파악해 이해도를 높혔습니다. <p/>'+
+    '기존에 구축되어있던 k8s에 개발용 서버를 추가적으로 세팅하는 작업을 진행했습니다. ArgoCD, GitHub Actions를 기반으로 자동 배포가 이루어지도록 했습니다. <p/>'+
+    'Jira Ticket을 기반으로 작업을 분배하면서 프로젝트를 진행하고 있으며, git 브랜치 관리 전략, 이슈 레이팅, 코드 리뷰를 적극적으로 활용하고 있습니다.'},
 
-    {name:'movie project', image:'', team:'팀', type:'Web', part:'Frontend, Backend', belong:'중앙대학교 소프트웨어학부 동아리 DevLabs',status:'ing', projectDescription:'- 팀 프로젝트(2인)', contribution:'', date:'2024.01 - 현재', skills:['Spring Boot','Java', 'MySQL', 'AWS','Python'],
-    github:'https://github.com/DevLabs-MP/server', blog:'', document:'', store:'', link:'',
-    description:'문화컨텐츠 정보 및 오프라인 행사 정보를 모아볼 수 있는 서비스 <strong>movie project<span style="font-size:12px; font-weight:normal">(가제)</span>의 개발</strong>을 진행하고 있습니다.'},
+    //{name:'movie project', image:'', team:'팀', type:'Web', part:'Frontend, Backend', belong:'중앙대학교 소프트웨어학부 동아리 DevLabs',status:'ing', projectDescription:'- 팀 프로젝트(2인)', contribution:'', date:'2024.01 - 현재', skills:['Spring Boot','Java', 'MySQL', 'AWS','Python'],
+   //github:'https://github.com/DevLabs-MP/server', blog:'', document:'', store:'', link:'',
+   // description:'문화컨텐츠 정보 및 오프라인 행사 정보를 모아볼 수 있는 서비스 <strong>movie project<span style="font-size:12px; font-weight:normal">(가제)</span>의 개발</strong>을 진행하고 있습니다.'},
 
     {name:'우아한테크코스 프리코스', image:'', team:'개인', type:'Etc', part:'', belong:'우아한테크코스',status:'done', projectDescription:'', contribution:'', date:'2023.10 - 2023.11', skills:['Java'],
     github:'https://github.com/YejiGong/woowacourse-pre', blog:'https://velog.io/@ydppwljg/series/%EC%9A%B0%ED%85%8C%EC%BD%94-%ED%94%84%EB%A6%AC%EC%BD%94%EC%8A%A4', document:'', store:'', link:'',
@@ -183,7 +187,7 @@ const Projects = () => {
     
     return(
         <div className={styles.container}>
-            <i style={{fontSize:"12px", textAlign:"center"}}>*진행한 모든 프로젝트를 선별 없이 아카이빙하였습니다.<br/>단, 제목에 💫표시가 되어있는 것은 Information 페이지에 수록되어있는 <strong>메인 프로젝트</strong>입니다.<br/>(last update: 2024.02.23) </i>
+            <i style={{fontSize:"12px", textAlign:"center"}}>*진행한 모든 프로젝트를 선별 없이 아카이빙하였습니다.<br/>단, 제목에 💫표시가 되어있는 것은 Information 페이지에 수록되어있는 <strong>메인 프로젝트</strong>입니다.<br/>(last update: 2024.04.10) </i>
             
                 <div className={styles.introduce}>
                     <div className={styles.sectionLeft}> 

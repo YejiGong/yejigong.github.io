@@ -381,6 +381,18 @@ const Information = () => {
                                     - 게시판 카드 게임 기능 추가 (개인) <span className={styles.skill}>PHP(그누보드)</span> <span className={styles.skill}>MySQL</span>
                                     <p/>
                                     - 아이템 구매 개수 제한 오류 추가 (개인) <span className={styles.skill}>PHP(그누보드)</span> <span className={styles.skill}>MySQL</span>
+                                    <p/>
+                                    - 게시판 비밀글 기능 추가 및 파일 업로드 오류 수정 (개인) <span className={styles.skill}>PHP(그누보드)</span> <span className={styles.skill}>MySQL</span>
+                                    <p/>
+                                    - 게시판 형식 수정 및 기념일 위젯 시간 오류 수정 (개인) <span className={styles.skill}>PHP(그누보드)</span> <span className={styles.skill}>MySQL</span>
+                                    <p/>
+                                    - http-https 전환으로 인한 링크 오류 수정 (개인) <span className={styles.skill}>PHP(그누보드)</span>
+                                    <p/>
+                                    - js 효과 적용 오류 수정 (개인) <span className={styles.skill}>PHP(그누보드)</span> <span className={styles.skill}>JavaScript</span>
+                                    <p/>
+                                    - 티스토리 기본 화면 수정 및 댓글란 수정 (개인) <span className={styles.skill}>HTML</span> <span className={styles.skill}>CSS</span>
+                                    <p/>
+                                    - 메뉴 위젯 오류 수정 및 디자인 커스텀, 게시판 구조 수정, 채팅 게시판 프로필 및 날짜 출력 적용, 명령어에 따른 이미지 출력 기능, js 효과 적용 오류 수정, 스티커 게시판 뒤집기 효과 추가 (개인) <span className={styles.skill}>PHP(그누보드)</span> <span className={styles.skill}>MySQL</span>
                                 </details>
                                 <p style={{fontSize:"15px", paddingBottom:"10px"}}>2023.09 - 현재</p>
 
