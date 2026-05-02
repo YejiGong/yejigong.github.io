@@ -85,10 +85,10 @@ const Information = () => {
                     <div className={styles.sectionLeft}> </div>
                     <div>
                         <p><strong>Strong</strong> | <span style={{fontSize:"13px"}}>중소규모 이상의 프로젝트를 개발한 경험이 있으며, 익숙하게 사용할 수 있습니다.</span></p>
-                        <p className={styles.content}>Java, Spring Boot, Python, MySQL, MongoDB</p>
+                        <p className={styles.content}>Java, Spring Boot, NestJS, TypeScript, Python, MySQL, PostgreSQL, MongoDB</p>
                     
                         <p><strong>Knowledgeable</strong> | <span style={{fontSize:"13px"}}>소규모 이하의 프로젝트를 개발한 경험이 있고, 코드를 이해할 수 있습니다.</span></p> 
-                        <p className={styles.content}>JavaScript, React, Node.js, C, PHP, HTML, CSS</p>
+                        <p className={styles.content}>React, Go, Rust, C, PHP, HTML, CSS</p>
                     </div>
                 </div>
                 <br/>
@@ -100,7 +100,48 @@ const Information = () => {
                     </div>
                     <div className={styles.introduce}>
                         <div className={styles.sectionLeft}> </div>
-                        <div style={{width:"80%", marginTop:"3rem", display:"flex"}}>
+                        <div style={{width:"80%"}}>
+                            <div style = {{marginTop: "3rem", display: "flex"}}>
+                            <div style={{width:"25%", wordWrap:"break-word"}}>
+                                <p style={{fontWeight:"bolder", fontSize:"25px", marginBottom:"1rem"}}>
+                                DEEP AI
+                                </p>
+                                <p>Backend Engineer</p>
+                                <p style={{fontSize:"12px"}}>2024.07 - 현재</p>
+                               
+                            </div>
+                            <div className={styles.line}></div>
+                            <div style={{padding:"1rem",width:"70%"}}>
+                                <p style={{fontWeight:"bolder", fontSize:"20px", marginBottom:"1px"}}>DEEP-NDT</p>
+                                <p style={{marginBottom:"2px"}}>Backend </p>
+                                <div style={{display:"flex",gap:"5px"}}>
+                                    <p className={styles.skill}>NestJS(TypeScript)</p>
+                                    <p className={styles.skill}>PostgreSQL</p>
+                                    <p className={styles.skill}>GCP</p>
+                                    
+                                </div>
+                                <div style={{ lineHeight:"1.5em"}}>
+                                인공지능 비파괴 검사 솔루션 <strong>{"<DEEP-NDT>"} 의 백엔드 개발</strong>을 담당하였습니다. <p/>
+                                설비 형상 관리 및 검사자의 검사 수행 기록 등을 관리하기 위한 매니지먼트 페이지의 확장과 실 서비스 운영을 위한 <span className={styles.highlight}>권한 체계 및 로깅 시스템</span>을 개발하였습니다.
+                                특히 로깅 시스템의 경우, 기존 TypeORM Logger를 확장하고 queryBuilder를 확장한 customQueryBuilder를 구현하여 삽입/삭제/수정 시에 자동으로 로그가 기록되도록 시스템화하였습니다. 이외 기타 신규 기능 API 개발 및 기존 기능들의 성능 개선을 위한 Python에서 Go로의 파서 마이그레이션 등의 개발 또한 수행하였습니다.
+
+                                <br/>
+                                <p/>
+                                기존 멀티 레포로 분산되어있던 백엔드 서버들을 모노레포로 통합하는 작업을 수행하면서, 공통 코드들에 대한 모듈 및 환경변수 구조화를 통해 재사용성을 높였습니다. 또한 API gateway와 Auth server를 분리하여 각 서버의 책임을 분리하도록 하였습니다.
+                                <br/>
+
+                                
+                                <p/>
+                                테스트 코드를 도입하여 커버리지 80%를 달성하였고, 모니터링 툴을 구축하고 이를 기반으로 한 기본 알림 시스템을 구축하였습니다. 또한 부하 테스트 툴을 기반으로 서비스 성능을 쉽게 테스트할 수 있도록 하였습니다.
+                                <p/>
+                                <p/>
+                                기능 개발 뿐만 아니라 <span className={styles.highlight}>실제 서비스 운영을 경험</span>하였으며, 특히 인터넷이 되지 않는 환경 등에서도 동작할 수 있도록 하기 위한 electron 기반 데스크톱 애플리케이션을 개발함에 따라 공통 모듈을 설계하며 <strong>다양한 환경에서의 서비스 지원</strong>을 경험하였습니다.
+                                <p/>
+                                </div>
+                            </div>
+                            </div>
+
+                            <div style = {{marginTop: "3rem", display: "flex"}}>
                             <div style={{width:"25%", wordWrap:"break-word"}}>
                                 <p style={{fontWeight:"bolder", fontSize:"25px", marginBottom:"1rem"}}>
                                 Connecting Road
@@ -137,7 +178,8 @@ const Information = () => {
                                 <p/>
                                 </div>
                             </div>
-                        </div>
+                            </div>
+                        </div>                    
                     </div>
                 </div>
 

@@ -8,6 +8,14 @@ import { IoIosLink } from "react-icons/io";
 
 
 const projectsData=[
+    {name:'DEEP-NDT💫', image:'', team:'팀', type:'Web', part:'Backend', belong:'DEEP AI',status:'ing', projectDescription:'', contribution:'', date:'2024.07 - 현재', skills:['NestJS', 'TypeScript', 'PostgreSQL', 'Go'],
+    github:'', blog:'', document:'', store:'',link:'', 
+    description:'인공지능 비파괴 검사 솔루션 <strong>DEEP-NDT의 백엔드 개발</strong>을 담당하였습니다.  <br/>설비 형상 관리 및 검사자의 검사 수행 기록 등을 관리하기 위한 매니지먼트 페이지의 확장과 실 서비스 운영을 위한 <span className={styles.highlight}>권한 체계 및 로깅 시스템</span>을 개발하였습니다. '+
+    '특히 로깅 시스템의 경우, 기존 TypeORM Logger를 확장하고 queryBuilder를 확장한 customQueryBuilder를 구현하여 삽입/삭제/수정 시에 자동으로 로그가 기록되도록 시스템화하였습니다. 이외 기타 신규 기능 API 개발 및 기존 기능들의 성능 개선을 위한 Python에서 Go로의 파서 마이그레이션 등의 개발 또한 수행하였습니다.' + 
+    '<p/>기존 멀티 레포로 분산되어있던 백엔드 서버들을 모노레포로 통합하는 작업을 수행하면서, 공통 코드들에 대한 모듈 및 환경변수 구조화를 통해 재사용성을 높였습니다. 또한 API gateway와 Auth server를 분리하여 각 서버의 책임을 분리하도록 하였습니다.'+
+    '<br/> 테스트 코드를 도입하여 커버리지 80%를 달성하였고, 모니터링 툴을 구축하고 이를 기반으로 한 기본 알림 시스템을 구축하였습니다. 또한 부하 테스트 툴을 기반으로 서비스 성능을 쉽게 테스트할 수 있도록 하였습니다.'+
+    '<p/>기능 개발 뿐만 아니라 <span className={styles.highlight}>실제 서비스 운영을 경험</span>하였으며, 특히 인터넷이 되지 않는 환경 등에서도 동작할 수 있도록 하기 위한 electron 기반 데스크톱 애플리케이션을 개발함에 따라 공통 모듈을 설계하며 <strong>다양한 환경에서의 서비스 지원</strong>을 경험하였습니다.'},
+
     {name:'개인 포트폴리오', image:'', team:'개인', type:'Web', part:'', belong:'',status:'ing', projectDescription:'', contribution:'', date:'2024.02 - 현재', skills:['Next.js'],
     github:'', blog:'', document:'', store:'',link:'https://yejigong.github.io', 
     description:'Next.js를 기반으로 하여 <strong>개인 포트폴리오 사이트</strong>를 제작하였습니다. <br/>메뉴를 Information, Projects로 구분하여 방문자가 개인 이력 및 소개와 프로젝트를 쉽게 확인할 수 있도록 구성하였습니다.'+
@@ -187,7 +195,7 @@ const Projects = () => {
     
     return(
         <div className={styles.container}>
-            <i style={{fontSize:"12px", textAlign:"center"}}>*진행한 모든 프로젝트를 선별 없이 아카이빙하였습니다.<br/>단, 제목에 💫표시가 되어있는 것은 Information 페이지에 수록되어있는 <strong>메인 프로젝트</strong>입니다.<br/>(last update: 2024.04.10) </i>
+            <i style={{fontSize:"12px", textAlign:"center"}}>*진행한 모든 프로젝트를 선별 없이 아카이빙하였습니다.<br/>단, 제목에 💫표시가 되어있는 것은 Information 페이지에 수록되어있는 <strong>메인 프로젝트</strong>입니다.<br/>(last update: 2026.05.02) </i>
             
                 <div className={styles.introduce}>
                     <div className={styles.sectionLeft}> 
@@ -216,7 +224,7 @@ const Projects = () => {
                             <hr width="80%" style={{border: "1px solid rgba(197 197 197,60)"}}/>
                             </div>
                             <div style={{position:"relative", top:"10px", textAlign:"center"}}>
-                                {['Spring Boot', 'Java', 'Kotlin', 'JavaScript','Next.js','express.js','React', 'Flask','Python','C', 'C++','Cuda','Go','MySQL','MongoDB','SQLite','PostgreSQL','AWS','Docker','k8s'].map((skills) => (
+                                {['Spring Boot', 'Java', 'Kotlin', 'NestJS', 'TypeScript', 'JavaScript','Next.js','express.js','React', 'Flask','Python','C', 'C++','Cuda','Go','MySQL','MongoDB','SQLite','PostgreSQL','AWS','Docker','k8s'].map((skills) => (
                                     <button className={styles.categoryskill} key={skills} onClick={()=>handleSkillsClick(skills)} style={{fontWeight:selectedSkills.includes(skills)?'bold':'normal', backgroundColor:selectedSkills.includes(skills)?'':''}}>{skills}</button>
                                 ))}
                             </div>
