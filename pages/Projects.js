@@ -8,13 +8,35 @@ import { IoIosLink } from "react-icons/io";
 
 
 const projectsData=[
+    {name:'데이터 관리 콘솔', image:'', team:'개인', type:'Web', part:'Full Stack', belong:'DEEP AI',status:'ing', projectDescription:'내부 업무 도구', contribution:'', date:'2026.10 - 현재', skills:['React', 'Node.js', 'PostgreSQL'],
+    github:'', blog:'', document:'', store:'',link:'',
+    description:'반복적인 사내 데이터 정제·등록 업무를 자동화하는 웹 도구를 개발하였습니다. React·Node.js·PostgreSQL을 기반으로 고객사별로 다른 Excel 양식을 범용으로 처리할 수 있도록 구성하여, 양식 차이로 반복되던 데이터 정제와 등록 작업을 반자동화하였습니다.<p/>데이터 복사, Excel 일괄 등록, 검사 생성과 파일 업로드를 지원하고, 작업 대상 검토부터 실행 결과 확인까지 화면에서 처리할 수 있도록 구성하였습니다.'},
+
+    {name:'DEEP-RT', image:'', team:'팀', type:'Web', part:'Backend', belong:'DEEP AI',status:'ing', projectDescription:'', contribution:'', date:'2026.10 - 현재', skills:['NestJS', 'Prisma', 'PostgreSQL', 'UDP', 'gRPC'],
+    github:'', blog:'', document:'', store:'',link:'',
+    description:'AI 기반 실시간 RT 검사 플랫폼의 백엔드 개발을 담당하였습니다. 검사 장비와 AI 분석 서버 사이에서 검사 요청, 분석·판정 결과와 검사 상태를 처리하는 서버 기능을 개발하였습니다.<p/>실시간 장비 통신을 위해 UDP 클라이언트 공통 모듈을 구현하였습니다. UDP 통신에서 발생할 수 있는 패킷 유실과 응답 지연에 대응하도록 요청·응답 매칭과 timeout·재시도 처리를 구성하고, gRPC 기반 AI 분석 서버와의 통신을 검사 처리 흐름에 연결하였습니다.<p/>장비 통신, 사용자 작업과 서버 오류를 추적하기 위한 공통 로그 관리 기능을 개발하였습니다. 특히 DB 저장 실패로 통신 이력이 유실되지 않도록 로컬 파일 기록과 복구 처리를 구현하고, 로그의 비동기 일괄 저장과 재시도를 적용하였습니다.'},
+
+    {name:'DEEP-LINK', image:'', team:'팀', type:'App', part:'Desktop', belong:'DEEP AI',status:'ing', projectDescription:'Tauri + Rust', contribution:'', date:'2026.01 - 현재', skills:['Tauri', 'Rust', 'TypeScript'],
+    github:'', blog:'', document:'', store:'',link:'',
+    description:'ECT 검사 데이터를 수집하는 데스크톱 소프트웨어 DEEP-LINK의 전반적인 개발에 참여하였습니다. Tauri·Rust와 React·TypeScript를 기반으로 애플리케이션을 개발하고, TCP·ZeroMQ 기반 데이터 수신과 패킷 분석을 구현하였습니다.<p/>약 <strong>4,000Hz의 데이터를 8시간 이상 안정적으로 연속 수집</strong>할 수 있도록 실시간 데이터 처리 성능을 최적화하였습니다. 특히 장시간 수집 중 발생한 메모리 증가와 화면 지연 문제를 해결하기 위해 백엔드의 데이터 버퍼 관리와 프론트의 상태 갱신·차트 렌더링 구조를 개선하였습니다.<p/>검사 설정과 수집 데이터를 관리하기 위한 <strong>사내 전용 파일 형식을 설계</strong>하고, 이를 기반으로 데이터 저장·조회 기능을 구현하였습니다. Web Sync를 통한 웹 서비스와의 데이터 동기화, 업데이트 서버 기반 자동 업데이트와 HWID 기반 라이선스 인증을 개발하였습니다.'},
+
+    {name:'ECT WASM', image:'', team:'팀', type:'Etc', part:'Backend', belong:'DEEP AI',status:'ing', projectDescription:'ECT 검사 데이터 파서', contribution:'', date:'2025.08 - 현재', skills:['Python', 'Go', 'WebAssembly'],
+    github:'', blog:'', document:'', store:'',link:'',
+    description:'여러 프로그램에서 수집한 ECT 검사 파일을 처리하는 파서입니다. 기존 Python 구현을 Go로 마이그레이션하여 <strong>처리 속도를 약 3배 높이고</strong>, 출력 데이터 구조와 신호 계산 결과를 비교·검증하여 기존 파서와의 호환성을 유지하였습니다. WebAssembly로 빌드해 프론트에 적용하여 브라우저에서 검사 파일을 직접 처리하고 데이터 로딩 성능을 개선하였습니다.'},
+
+    {name:'IRIS Go Parser', image:'', team:'팀', type:'Etc', part:'Backend', belong:'DEEP AI',status:'ing', projectDescription:'IRIS 검사 데이터 파서', contribution:'', date:'2025.09 - 현재', skills:['Python', 'Go'],
+    github:'', blog:'', document:'', store:'',link:'',
+    description:'여러 프로그램에서 수집한 IRIS 검사 파일을 처리하는 파서입니다. 성능 개선을 위해 기존 Python 구현을 Go로 마이그레이션하여 <strong>처리 속도를 약 2배 높였습니다.</strong> 기존 서비스와의 호환성을 유지하기 위해 출력 데이터 구조와 신호 계산 결과를 비교·검증하였습니다.'},
+
     {name:'DEEP-NDT💫', image:'', team:'팀', type:'Web', part:'Backend', belong:'DEEP AI',status:'ing', projectDescription:'', contribution:'', date:'2024.07 - 현재', skills:['NestJS', 'TypeScript', 'PostgreSQL', 'Go'],
     github:'', blog:'', document:'', store:'',link:'', 
-    description:'인공지능 비파괴 검사 솔루션 <strong>DEEP-NDT의 백엔드 개발</strong>을 담당하였습니다.  <br/>설비 형상 관리 및 검사자의 검사 수행 기록 등을 관리하기 위한 매니지먼트 페이지의 확장과 실 서비스 운영을 위한 <span className={styles.highlight}>권한 체계 및 로깅 시스템</span>을 개발하였습니다. '+
-    '특히 로깅 시스템의 경우, 기존 TypeORM Logger를 확장하고 queryBuilder를 확장한 customQueryBuilder를 구현하여 삽입/삭제/수정 시에 자동으로 로그가 기록되도록 시스템화하였습니다. 이외 기타 신규 기능 API 개발 및 기존 기능들의 성능 개선을 위한 Python에서 Go로의 파서 마이그레이션 등의 개발 또한 수행하였습니다.' + 
-    '<p/>기존 멀티 레포로 분산되어있던 백엔드 서버들을 모노레포로 통합하는 작업을 수행하면서, 공통 코드들에 대한 모듈 및 환경변수 구조화를 통해 재사용성을 높였습니다. 또한 API gateway와 Auth server를 분리하여 각 서버의 책임을 분리하도록 하였습니다.'+
-    '<br/> 테스트 코드를 도입하여 커버리지 80%를 달성하였고, 모니터링 툴을 구축하고 이를 기반으로 한 기본 알림 시스템을 구축하였습니다. 또한 부하 테스트 툴을 기반으로 서비스 성능을 쉽게 테스트할 수 있도록 하였습니다.'+
-    '<p/>기능 개발 뿐만 아니라 <span className={styles.highlight}>실제 서비스 운영을 경험</span>하였으며, 특히 인터넷이 되지 않는 환경 등에서도 동작할 수 있도록 하기 위한 electron 기반 데스크톱 애플리케이션을 개발함에 따라 공통 모듈을 설계하며 <strong>다양한 환경에서의 서비스 지원</strong>을 경험하였습니다.'},
+    description:'인공지능 비파괴 검사 솔루션 <strong>DEEP-NDT의 백엔드 개발과 서비스 운영</strong>을 담당하였습니다. 전반적인 API 신규 개발과 기존 기능 개선을 수행하고, ML 서버 및 검사 파일 파서와의 gRPC·HTTP 통신을 관리하였습니다.<p/>'+
+    '실제 서비스 운영에 필요한 인증·인가 체계와 로깅 시스템을 개발하였습니다. 인가 체계는 사용자 역할뿐 아니라 조직·Workspace 범위, 엔티티 간 계층 관계와 상태에 따라 접근 권한을 판단하도록 설계하였습니다. 이를 공통 권한 검증 로직으로 구성하여 API별로 일관된 접근 제어를 적용하였습니다.<p/>'+
+    '특히 로깅 시스템은 기존 TypeORM Logger를 확장하고 <strong>customQueryBuilder를 구현하여 데이터 삽입·수정·삭제 시 변경 이력이 자동으로 기록되도록 시스템화</strong>하였습니다. 변경 전후 데이터와 작업자 정보를 기록하고, requestId·traceId를 연결하여 사용자 요청과 데이터 변경 이력을 함께 추적할 수 있도록 하였습니다.<p/>'+
+    '기존 멀티 레포로 분산되어 있던 백엔드 서버들을 모노레포로 통합하면서 공통 모듈과 환경 설정을 정리하였습니다. API Gateway와 인증 서버를 분리하고, 인증·인가·로깅·캐시·메시징 등 여러 서버에서 사용하는 기능을 공통화하였습니다. 로컬 캐시와 RabbitMQ 기반 캐시 갱신 처리를 공통 모듈에 포함하여 재사용성을 높였습니다.<p/>'+
+    '서비스 운영 중 발생한 성능 병목을 개선하였습니다. 설비별 반복 조회를 일괄 집계로 전환하고 쿼리 구조와 인덱스를 개선하여 <strong>일부 조회 시간을 약 9초에서 1초로 단축</strong>하였습니다. 또한 <strong>7분 이상 걸리던 Excel 처리를 5초 이내로 개선</strong>하고, 파일 업로드를 비동기 처리로 전환하여 <strong>약 8~9초 소요되던 대기 시간을 2초 내외로 줄였습니다.</strong><p/>'+
+    '테스트 코드를 도입하여 커버리지 80%를 달성하고, 인증·권한 등 주요 로직의 변경을 검증하는 테스트를 작성하였습니다. 모니터링 툴과 기본 알림 시스템을 구축하고, 부하 테스트를 통해 서비스 성능을 확인할 수 있는 환경을 마련하였습니다.<p/>'+
+    '인터넷 연결이 제한된 환경에서도 서비스를 사용할 수 있도록 Electron 기반 데스크톱 애플리케이션을 개발하였습니다. 웹·오프라인 버전에서 활용할 공통 모듈을 설계하며 다양한 실행 환경에서의 서비스 개발과 운영을 경험하였습니다.'},
 
     {name:'개인 포트폴리오', image:'', team:'개인', type:'Web', part:'', belong:'',status:'ing', projectDescription:'', contribution:'', date:'2024.02 - 현재', skills:['Next.js'],
     github:'', blog:'', document:'', store:'',link:'https://yejigong.github.io', 
@@ -195,7 +217,7 @@ const Projects = () => {
     
     return(
         <div className={styles.container}>
-            <i style={{fontSize:"12px", textAlign:"center"}}>*진행한 모든 프로젝트를 선별 없이 아카이빙하였습니다.<br/>단, 제목에 💫표시가 되어있는 것은 Information 페이지에 수록되어있는 <strong>메인 프로젝트</strong>입니다.<br/>(last update: 2026.05.02) </i>
+            <i style={{fontSize:"12px", textAlign:"center"}}>*개인·팀 프로젝트를 작업 근거와 함께 정리했습니다.<br/>제목에 💫표시가 있는 프로젝트는 Information 페이지의 <strong>대표 프로젝트</strong>입니다.<br/>(last update: 2026.11.07) </i>
             
                 <div className={styles.introduce}>
                     <div className={styles.sectionLeft}> 

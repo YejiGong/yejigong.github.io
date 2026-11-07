@@ -121,21 +121,19 @@ const Information = () => {
                                     
                                 </div>
                                 <div style={{ lineHeight:"1.5em"}}>
-                                인공지능 비파괴 검사 솔루션 <strong>{"<DEEP-NDT>"} 의 백엔드 개발</strong>을 담당하였습니다. <p/>
-                                설비 형상 관리 및 검사자의 검사 수행 기록 등을 관리하기 위한 매니지먼트 페이지의 확장과 실 서비스 운영을 위한 <span className={styles.highlight}>권한 체계 및 로깅 시스템</span>을 개발하였습니다.
-                                특히 로깅 시스템의 경우, 기존 TypeORM Logger를 확장하고 queryBuilder를 확장한 customQueryBuilder를 구현하여 삽입/삭제/수정 시에 자동으로 로그가 기록되도록 시스템화하였습니다. 이외 기타 신규 기능 API 개발 및 기존 기능들의 성능 개선을 위한 Python에서 Go로의 파서 마이그레이션 등의 개발 또한 수행하였습니다.
-
-                                <br/>
+                                인공지능 비파괴 검사 솔루션 <strong>DEEP-NDT의 백엔드 개발과 서비스 운영</strong>을 담당하였습니다. 전반적인 API 신규 개발과 기존 기능 개선을 수행하고, ML 서버 및 검사 파일 파서와의 gRPC·HTTP 통신을 관리하였습니다.
                                 <p/>
-                                기존 멀티 레포로 분산되어있던 백엔드 서버들을 모노레포로 통합하는 작업을 수행하면서, 공통 코드들에 대한 모듈 및 환경변수 구조화를 통해 재사용성을 높였습니다. 또한 API gateway와 Auth server를 분리하여 각 서버의 책임을 분리하도록 하였습니다.
-                                <br/>
-
-                                
+                                실제 서비스 운영에 필요한 인증·인가 체계와 로깅 시스템을 개발하였습니다. 인가 체계는 사용자 역할뿐 아니라 조직·Workspace 범위, 엔티티 간 계층 관계와 상태에 따라 접근 권한을 판단하도록 설계하였습니다. 이를 공통 권한 검증 로직으로 구성하여 API별로 일관된 접근 제어를 적용하였습니다.
                                 <p/>
-                                테스트 코드를 도입하여 커버리지 80%를 달성하였고, 모니터링 툴을 구축하고 이를 기반으로 한 기본 알림 시스템을 구축하였습니다. 또한 부하 테스트 툴을 기반으로 서비스 성능을 쉽게 테스트할 수 있도록 하였습니다.
+                                특히 로깅 시스템은 기존 TypeORM Logger를 확장하고 <strong>customQueryBuilder를 구현하여 데이터 삽입·수정·삭제 시 변경 이력이 자동으로 기록되도록 시스템화</strong>하였습니다. 변경 전후 데이터와 작업자 정보를 기록하고, requestId·traceId를 연결하여 사용자 요청과 데이터 변경 이력을 함께 추적할 수 있도록 하였습니다.
                                 <p/>
+                                기존 멀티 레포로 분산되어 있던 백엔드 서버들을 모노레포로 통합하면서 공통 모듈과 환경 설정을 정리하였습니다. API Gateway와 인증 서버를 분리하고, 인증·인가·로깅·캐시·메시징 등 여러 서버에서 사용하는 기능을 공통화하였습니다. 로컬 캐시와 RabbitMQ 기반 캐시 갱신 처리를 공통 모듈에 포함하여 재사용성을 높였습니다.
                                 <p/>
-                                기능 개발 뿐만 아니라 <span className={styles.highlight}>실제 서비스 운영을 경험</span>하였으며, 특히 인터넷이 되지 않는 환경 등에서도 동작할 수 있도록 하기 위한 electron 기반 데스크톱 애플리케이션을 개발함에 따라 공통 모듈을 설계하며 <strong>다양한 환경에서의 서비스 지원</strong>을 경험하였습니다.
+                                서비스 운영 중 발생한 성능 병목을 개선하였습니다. 설비별 반복 조회를 일괄 집계로 전환하고 쿼리 구조와 인덱스를 개선하여 <strong>일부 조회 시간을 약 9초에서 1초로 단축</strong>하였습니다. 또한 <strong>7분 이상 걸리던 Excel 처리를 5초 이내로 개선</strong>하고, 파일 업로드를 비동기 처리로 전환하여 <strong>약 8~9초 소요되던 대기 시간을 2초 내외로 줄였습니다.</strong>
+                                <p/>
+                                테스트 코드를 도입하여 커버리지 80%를 달성하고, 인증·권한 등 주요 로직의 변경을 검증하는 테스트를 작성하였습니다. 모니터링 툴과 기본 알림 시스템을 구축하고, 부하 테스트를 통해 서비스 성능을 확인할 수 있는 환경을 마련하였습니다.
+                                <p/>
+                                인터넷 연결이 제한된 환경에서도 서비스를 사용할 수 있도록 Electron 기반 데스크톱 애플리케이션을 개발하였습니다. 웹·오프라인 버전에서 활용할 공통 모듈을 설계하며 다양한 실행 환경에서의 서비스 개발과 운영을 경험하였습니다.
                                 <p/>
                                 </div>
                             </div>
@@ -435,8 +433,12 @@ const Information = () => {
                                     - 티스토리 기본 화면 수정 및 댓글란 수정 (개인) <span className={styles.skill}>HTML</span> <span className={styles.skill}>CSS</span>
                                     <p/>
                                     - 메뉴 위젯 오류 수정 및 디자인 커스텀, 게시판 구조 수정, 채팅 게시판 프로필 및 날짜 출력 적용, 명령어에 따른 이미지 출력 기능, js 효과 적용 오류 수정, 스티커 게시판 뒤집기 효과 추가 (개인) <span className={styles.skill}>PHP(그누보드)</span> <span className={styles.skill}>MySQL</span>
+                                    <p/>
+                                    - 티스토리 HTML 모드 글 작성 설정, 헤더 여백 CSS 수정, 그누보드 갤러리 게시판 오류 및 스타일 수정 (개인) <span className={styles.skill}>HTML</span> <span className={styles.skill}>JavaScript</span> <span className={styles.skill}>CSS</span>
+                                    <p/>
+                                    - Obsidian 기반 페이지 설정 및 사용 환경 지원 (개인) <span className={styles.skill}>Obsidian</span> <span className={styles.skill}>JavaScript</span>
                                 </details>
-                                <p style={{fontSize:"15px", paddingBottom:"10px"}}>2023.09 - 현재</p>
+                                <p style={{fontSize:"15px", paddingBottom:"10px"}}>2023.09 - 2026.08</p>
 
                                 <span style={{fontSize:"19px"}}>기타</span>
                                 <p/>
@@ -445,6 +447,9 @@ const Information = () => {
                                     <p/>
                                     - 운영 종료 사이트 데이터 백업을 위한 스크래퍼 개발 및 아카이빙용 사이트 구현 (개인) <span className={styles.skill}>Next.js</span> <span className={styles.skill}>mongoDB(Atlas)</span>
                                     <p/>&nbsp;(2023.04 - 2023.07)
+                                    <p/>
+                                    - FOTRA 다이어리 이미지 업로드·조회 API 및 DB 구조, 사용자 수정·탈퇴·관리자 권한 처리, 다국어·회원가입·마이페이지·포인트 UI 개선 (개인) <span className={styles.skill}>NestJS</span> <span className={styles.skill}>Prisma</span> <span className={styles.skill}>MySQL</span> <span className={styles.skill}>React</span> <span className={styles.skill}>TypeScript</span>
+                                    <p/>&nbsp;(2025.05)
                                 </details>
                                 <p/>
                             </div>
