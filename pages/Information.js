@@ -9,9 +9,9 @@ import { IoDocumentText,IoLogoGooglePlaystore } from "react-icons/io5";
 
 const Information = () => {
     const text = ['System.out.println(','&nbsp;&nbsp;안녕하세요,', '&nbsp;&nbsp;백엔드 개발자 공예지입니다.',');'];
-    const [texts, setTexts] = useState([]);
-    const [informationVisible, setInformationVisible] = useState(false);
-    const idxRef = useRef(0);
+    const [texts, setTexts] = useState(text);
+    const [informationVisible, setInformationVisible] = useState(true);
+    const idxRef = useRef(text.length);
     const currentWindowY = useRef(0);
 
     useEffect(()=>{
