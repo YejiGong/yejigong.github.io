@@ -8,7 +8,7 @@ import { IoDocumentText,IoLogoGooglePlaystore } from "react-icons/io5";
 
 
 const Information = () => {
-    const text = ['System.out.println(','&nbsp;&nbsp;안녕하세요,', '&nbsp;&nbsp;백엔드 개발자 공예지입니다.',');'];
+    const text = ['System.out.println(','&nbsp;&nbsp;안녕하세요,', '&nbsp;&nbsp;개발자 공예지입니다.',');'];
     const [texts, setTexts] = useState(text);
     const [informationVisible, setInformationVisible] = useState(true);
     const idxRef = useRef(text.length);
@@ -50,7 +50,7 @@ const Information = () => {
             {informationVisible && (<div className={styles.information}>
                 <a href="https://github.com/YejiGong" target="_blank"><FaGithub /></a> | <a href="https://velog.io/@ydppwljg" target="_blank"><SiVelog /></a> | <a target="_blank" href="mailto:yejigong00@gmail.com"><IoMdMail /></a>
                 
-                <i style={{fontSize:"12px"}}><p/>본 페이지는 PC 환경에 최적화되어있습니다.</i>
+                <p className={styles.profileNote}>Backend · Data Processing · System Integration</p>
                 <br/>
                 <br/>
 
@@ -62,16 +62,14 @@ const Information = () => {
                 <div className={styles.introduce}>
                     <div className={styles.sectionLeft}></div>
                     <div>
-                        <p>처음 printf({"\"Hello, World!\""});를 작성했던 때부터 지금 현재까지 <i>개발이 <strong>가장 즐거운</strong>, 그래서 더 <strong>잘 하고싶은</strong> 개발자</i>입니다.</p>
-                        <p className={styles.bold}>새로운 것을 접하고, 배우는 것을 즐거워하여 빠르게 적응하고 익혀서 사용할 수 있습니다.</p>
-                        <p className={styles.content}>이러한 강점을 바탕으로 프로젝트 상황에 따른 적절한 언어, 프레임워크가 있다면 이전에 접해보지 않았더라도 두려워하지 않고 빠르게 익혀서 적용합니다.<br/>
-                        실제로 이전에 접해보지 않았던 언어나 프레임워크를 빠르게 익혀서 프로젝트를 진행한 경험이 다수 있습니다.</p>
-                    
-                        <p className={styles.bold}>팀 프로젝트에서는 소통이 가장 중요하다고 생각하여, 팀원들에게 먼저 다가가며 적극적으로 소통합니다.</p>
-                        <p className={styles.content}>같은 파트뿐만 아니라 다른 파트를 담당하는 팀원들과도 진행 상황을 공유하며 함께 해결책을 고민합니다. 역할 분담에 국한하지 않고, 도울 수 있다면 힘을 보탭니다.</p>
-
-                        <p className={styles.bold}>무엇에서든, 누구에게든 배울 점은 꼭 있다고 생각하여 늘 배움의 자세를 갖춥니다.</p>
-                        <p className={styles.content}>오늘보다 더 나은 내일을 위해 1일 1커밋을 실천중입니다. 평소에도 알고리즘 문제 풀이를 꾸준하게 하고 있으며, 개인적으로 공부한 내용을 블로그에 기록하고 있습니다.</p>
+                        <p className={styles.introLead}>잘 동작하는 것과 <strong>잘 만들어진 것</strong>은 다르다고 생각합니다.</p>
+                        <p className={styles.content}>백엔드 설계부터 검사 데이터 처리, 실시간 장비 연동, 서비스 운영까지 다양한 기술 과제를 해결해 왔습니다. 주어진 기능을 구현하는 데 그치지 않고, 시스템과 개발 환경이 더 안정적이고 효율적으로 동작할 방법을 고민하고 직접 개선합니다.</p>
+                        <p className={styles.bold}><mark className={styles.introHighlight}>관성적인 비효율을 당연하게 넘기지 않습니다.</mark></p>
+                        <p className={styles.content}>이미 동작하는 시스템이라도 더 나은 방법이 있는지 살펴봅니다. 지연되는 데이터 처리나 반복되는 연산, 과도한 메모리 사용의 원인을 찾고 개선합니다. 쿼리 실행 계획과 프로파일링으로 문제를 분석하며, 로직 수정부터 자료구조와 데이터 처리 방식의 개선까지 상황에 맞는 해결책을 적용해 왔습니다.</p>
+                        <p className={styles.bold}><mark className={styles.introHighlight}>더 좋은 제품을, 더 나은 방식으로 만듭니다.</mark></p>
+                        <p className={styles.content}>서비스 기능을 만드는 과정에서 반복되는 작업과 공통으로 지켜야 할 규칙에도 관심을 기울입니다. 로깅과 권한 검증을 공통화하고 프레임워크의 기능을 확장해 여러 서비스에서 활용할 수 있는 기반을 만들었습니다. 한 번의 개선이 이후의 개발과 운영에도 도움이 되도록, 변경과 유지보수를 고려한 구조를 고민합니다.</p>
+                        <p className={styles.bold}><mark className={styles.introHighlight}>문제가 있는 곳까지, 기술의 경계를 넘어갑니다.</mark></p>
+                        <p className={styles.content}>익숙한 언어나 프레임워크에 해법을 한정하지 않습니다. NestJS 기반 백엔드에서 Go를 활용한 검사 데이터 처리, Rust 기반 실시간 장비 연동까지 필요한 기술을 익히고 적용했습니다. 서로 다른 실행 환경과 통신 방식, 데이터 형식을 이해하고 연결해 실제 제품에서 동작하는 결과를 만들어 왔습니다.</p>
                     </div>
                 </div>
 
@@ -114,7 +112,7 @@ const Information = () => {
                             <div style={{padding:"1rem",width:"70%"}}>
                                 <p style={{fontWeight:"bolder", fontSize:"20px", marginBottom:"1px"}}>DEEP-NDT</p>
                                 <p style={{marginBottom:"2px"}}>Backend </p>
-                                <div style={{display:"flex",gap:"5px"}}>
+                                <div className={styles.projectSkills}>
                                     <p className={styles.skill}>NestJS(TypeScript)</p>
                                     <p className={styles.skill}>PostgreSQL</p>
                                     <p className={styles.skill}>GCP</p>
@@ -125,13 +123,13 @@ const Information = () => {
                                 <p/>
                                 실제 서비스 운영에 필요한 인증·인가 체계와 로깅 시스템을 개발하였습니다. 인가 체계는 사용자 역할뿐 아니라 조직·Workspace 범위, 엔티티 간 계층 관계와 상태에 따라 접근 권한을 판단하도록 설계하였습니다. 이를 공통 권한 검증 로직으로 구성하여 API별로 일관된 접근 제어를 적용하였습니다.
                                 <p/>
-                                특히 로깅 시스템은 기존 TypeORM Logger를 확장하고 <strong>customQueryBuilder를 구현하여 데이터 삽입·수정·삭제 시 변경 이력이 자동으로 기록되도록 시스템화</strong>하였습니다. 변경 전후 데이터와 작업자 정보를 기록하고, requestId·traceId를 연결하여 사용자 요청과 데이터 변경 이력을 함께 추적할 수 있도록 하였습니다.
+                                특히 로깅 시스템은 기존 TypeORM Logger를 확장하고 <strong>customQueryBuilder를 구현하여 데이터 삽입·수정·삭제 시 <span className={styles.highlight}>변경 이력이 자동으로 기록되도록 시스템화</span></strong>하였습니다. 변경 전후 데이터와 작업자 정보를 기록하고, requestId·traceId를 연결하여 사용자 요청과 데이터 변경 이력을 함께 추적할 수 있도록 하였습니다.
                                 <p/>
                                 기존 멀티 레포로 분산되어 있던 백엔드 서버들을 모노레포로 통합하면서 공통 모듈과 환경 설정을 정리하였습니다. API Gateway와 인증 서버를 분리하고, 인증·인가·로깅·캐시·메시징 등 여러 서버에서 사용하는 기능을 공통화하였습니다. 로컬 캐시와 RabbitMQ 기반 캐시 갱신 처리를 공통 모듈에 포함하여 재사용성을 높였습니다.
                                 <p/>
-                                서비스 운영 중 발생한 성능 병목을 개선하였습니다. 설비별 반복 조회를 일괄 집계로 전환하고 쿼리 구조와 인덱스를 개선하여 <strong>일부 조회 시간을 약 9초에서 1초로 단축</strong>하였습니다. 또한 <strong>7분 이상 걸리던 Excel 처리를 5초 이내로 개선</strong>하고, 파일 업로드를 비동기 처리로 전환하여 <strong>약 8~9초 소요되던 대기 시간을 2초 내외로 줄였습니다.</strong>
+                                서비스 운영 중 발생한 <span className={styles.highlight}>성능 병목을 개선</span>하였습니다. 설비별 반복 조회를 일괄 집계로 전환하고 쿼리 구조와 인덱스를 개선하여 <strong>일부 조회 시간을 약 9초에서 1초로 단축</strong>하였습니다. 또한 <strong>7분 이상 걸리던 Excel 처리를 5초 이내로 개선</strong>하고, 파일 업로드를 비동기 처리로 전환하여 <strong>약 8~9초 소요되던 대기 시간을 2초 내외로 줄였습니다.</strong>
                                 <p/>
-                                테스트 코드를 도입하여 커버리지 80%를 달성하고, 인증·권한 등 주요 로직의 변경을 검증하는 테스트를 작성하였습니다. 모니터링 툴과 기본 알림 시스템을 구축하고, 부하 테스트를 통해 서비스 성능을 확인할 수 있는 환경을 마련하였습니다.
+                                <span className={styles.highlight}>테스트 코드를 도입</span>하여 커버리지 80%를 달성하고, 인증·권한 등 주요 로직의 변경을 검증하는 테스트를 작성하였습니다. 모니터링 툴과 기본 알림 시스템을 구축하고, 부하 테스트를 통해 서비스 성능을 확인할 수 있는 환경을 마련하였습니다.
                                 <p/>
                                 인터넷 연결이 제한된 환경에서도 서비스를 사용할 수 있도록 Electron 기반 데스크톱 애플리케이션을 개발하였습니다. 웹·오프라인 버전에서 활용할 공통 모듈을 설계하며 다양한 실행 환경에서의 서비스 개발과 운영을 경험하였습니다.
                                 <p/>
@@ -152,7 +150,7 @@ const Information = () => {
                             <div style={{padding:"1rem",width:"70%"}}>
                                 <p style={{fontWeight:"bolder", fontSize:"20px", marginBottom:"1px"}}>Connectors</p>
                                 <p style={{marginBottom:"2px"}}>Backend <span style={{fontSize:"12px"}}>- 팀 프로젝트 (4인) <br/>(백엔드 기여도 100%)</span></p>
-                                <div style={{display:"flex",gap:"5px"}}>
+                                <div className={styles.projectSkills}>
                                     <p className={styles.skill}>Spring Boot(Java)</p>
                                     <p className={styles.skill}>MongoDB(Atlas)</p>
                                     <p className={styles.skill}>AWS</p>
@@ -198,7 +196,7 @@ const Information = () => {
                                     <p>Backend <span style={{fontSize:"12px"}}>- 팀 프로젝트 (3인) <br/>(백엔드 기여도 70%)</span></p>
                                     
                                     <p style={{fontSize:"12px"}}>2023.03 - 2023.06</p>
-                                    <div style={{display:"flex",gap:"2px", flexWrap:"wrap"}}>
+                                    <div className={styles.projectSkills}>
                                         <p className={styles.skill}>Spring Boot(Java)</p>
                                         <p className={styles.skill}>MySQL</p>
                                         <p className={styles.skill}>AWS</p>
@@ -239,7 +237,7 @@ const Information = () => {
                                 </p>
                                 <p>Backend, Data <span style={{fontSize:"12px"}}>- 팀 프로젝트 (4인)<br/>(백엔드 기여도 100%, 데이터 기여도 90%)</span></p>
                                 <p style={{fontSize:"12px"}}>2022.08</p>
-                                <div style={{display:"flex",gap:"2px",flexWrap:"wrap"}}>
+                                <div className={styles.projectSkills}>
                                     <p className={styles.skill}>Flask</p>
                                     <p className={styles.skill}>SQLite</p>
                                     <p className={styles.skill}>AWS</p>
@@ -362,14 +360,14 @@ const Information = () => {
                 </div>
                 <div className={styles.introduce}>
                     <div className={styles.sectionLeft}> </div>
-                    <div style={{width:"70%"}}>
+                    <div className={styles.etcContent}>
 
-                        <div style={{display:"flex"}}>
-                            <div style={{fontWeight:"bolder", fontSize:"18px", marginBottom:"1rem", width:"15%", alignSelf:"center",  wordWrap:"break-word"}}>
+                        <div className={styles.etcRow}>
+                            <div className={styles.etcLabel}>
                                 Outsourcing (Commission)
                             </div>
                             <div className={styles.line}></div>
-                            <div style={{width:"80%", marginLeft:"10px"}}>
+                            <div className={styles.etcDetails}>
                                 <span style={{fontSize:"19px"}}>크몽</span>
                                 <p/>
                                 <details>
@@ -455,12 +453,12 @@ const Information = () => {
                             </div>
                         </div>
 
-                        <div style={{display:"flex"}}>
-                            <div style={{fontWeight:"bolder", fontSize:"18px", marginBottom:"1rem", width:"15%", alignSelf:"center", wordWrap:"break-word"}}>
+                        <div className={styles.etcRow}>
+                            <div className={styles.etcLabel}>
                                 Study
                             </div>
                             <div className={styles.line}></div>
-                            <div style={{width:"80%", marginLeft:"10px"}}>
+                            <div className={styles.etcDetails}>
                                 <p/>
                                 <span style={{fontSize:"19px"}}>Clean Code 스터디</span>
                                 <p/>
