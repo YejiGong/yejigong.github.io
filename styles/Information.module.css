@@ -69,3 +69,95 @@
     border-radius:2px;
      margin:0.05rem;
 }
+/* Keep the existing layout and teal accent; refine reading and emphasis. */
+.container{color:#283c40;overflow:visible}.greetings{font-size:28px;line-height:1.6;letter-spacing:-.035em}.information{line-height:1.8}.section{margin-top:3.5rem}.sectionTitle{color:#127b83;font-size:17px}.section hr{border:0;border-top:1px solid #dce9e9}.line{border-color:#d8e9e9;border-right-width:2px}.content{font-size:16px;line-height:1.85;margin-bottom:24px!important;color:#637476}.bold{font-size:17px;color:#2a4d50}.highlight{background:#d9eff0;padding:1px 4px;color:#155d63}.skill{background:#edf4f4;color:#3c6468;border:1px solid #dce9e9;padding:3px 7px;border-radius:4px;font-size:12px}.introLead{font-size:21px;line-height:1.75;letter-spacing:-.035em;margin-bottom:30px}.workLabel{font-size:16px;font-weight:700;color:#187a82;margin:27px 0 8px}.roleSummary{font-size:17px;line-height:1.85;margin-top:0}.profileNote{font-size:12px;color:#859596}.information strong{font-weight:700;color:#254e53}.information p{word-break:keep-all}.introduce{align-items:flex-start}
+@media(max-width:700px){.container{padding:1.5rem 0}.sectionLeft{padding:0;width:0;min-width:0}.sectionTitle{width:auto;min-width:120px;text-align:left}.introduce>div:last-child{width:100%!important}.introduce>div:last-child>div[style*="display: flex"]{flex-wrap:wrap}.introduce>div:last-child>div[style*="display: flex"]>div:first-child{width:100%!important}.introduce>div:last-child>div[style*="display: flex"]>div:last-child{width:100%!important;padding:0!important}.line{display:none}.greetings{font-size:22px}.introLead{font-size:20px}.roleSummary{font-size:16px}}
+
+/* Neutral reading palette, with teal reserved for section accents. */
+.container{color:#292d32}.content{color:#60656d}.bold,.information strong{color:#252a30}.profileNote{color:#737981}.line{border-color:#e2e4e7}.section hr{border-color:#dfe2e5}.skill{background:#f3f4f5;color:#555c65;border-color:#e3e5e8}.highlight{background:#e4f1f0;color:#176c70}.roleSummary{font-size:16px;line-height:1.85;margin-bottom:24px}.careerProject{margin:0 0 24px}.careerProject h3{font-size:17px;margin:0 0 8px;color:#292d32}.careerProject h3 span{display:block;font-size:13px;font-weight:400;color:#737981;margin-top:2px}.careerProject p,.careerProject ul{font-size:15px;line-height:1.9;margin:0;color:#525860}.careerProject ul{padding-left:19px}.careerProject li{padding-left:3px;margin-bottom:9px}.careerStack{border-top:1px solid #e8e9eb;padding-top:13px;font-size:12px;color:#737981;line-height:1.8}
+
+.experienceList{margin:40px 0 0 20%}.experienceRow{display:grid;grid-template-columns:190px minmax(0,1fr);gap:28px;margin-bottom:56px;align-items:start}.companyMeta{min-width:0}.companyMeta h2{font-size:24px;line-height:1.4;margin:0 0 14px;letter-spacing:-.035em}.companyMeta p{font-size:14px;line-height:1.7;margin:0 0 10px}.companyMeta .companyDate{font-size:12px;color:#737981}.companySkills{display:flex;flex-wrap:wrap;gap:6px;margin:18px 0}.experienceBody{min-width:0;border-left:1px solid #e2e4e7;padding-left:28px}.careerProject{margin-bottom:32px}.careerProject h3{font-size:19px;margin:0 0 18px}.careerProject h3 span{margin-top:4px}.careerProject h4{font-size:15px;line-height:1.8;margin:22px 0 7px;color:#292d32;font-weight:700}.careerProject p{margin:0 0 14px;font-size:15px;line-height:1.9}.roleSummary{margin-bottom:30px}
+@media(max-width:950px){.experienceList{margin-left:0}.experienceRow{grid-template-columns:170px minmax(0,1fr);gap:22px}.experienceBody{padding-left:22px}}
+@media(max-width:600px){.experienceRow{display:block}.companyMeta{margin-bottom:26px}.experienceBody{padding-left:0;border-left:0}.companySkills{margin:14px 0}.careerProject h3{font-size:18px}}
+
+/* Refine the secondary sections without splitting long labels. */
+.etcContent{width:80%;min-width:0}.etcRow{display:grid;grid-template-columns:minmax(155px, 190px) minmax(0, 1fr);gap:24px;align-items:start;margin:24px 0 52px}.etcRow>.line{display:none}.etcLabel{font-size:17px;font-weight:700;line-height:1.5;overflow-wrap:normal;word-break:normal}.etcDetails{min-width:0;border-left:1px solid #dfe4ec;padding-left:26px;line-height:1.8}.etcDetails summary{cursor:pointer;color:#315fa8;font-size:14px;font-weight:700}.etcDetails details[open] summary{margin-bottom:12px}.etcDetails details{color:#505a69}.sectionTitle{color:#315fa8}.highlight{background:#e9f1ff;color:#244f94}
+@media(max-width:700px){.etcContent{width:100%}.etcRow{display:block;margin:18px 0 40px}.etcLabel{margin-bottom:14px}.etcDetails{border-left:0;padding-left:0}}
+
+.skill{display:inline-block;background:none;border:0;border-radius:0;padding:0;margin:0 10px 4px 0;color:#687485;font-size:12px;line-height:1.5}
+
+/* Typography hierarchy is shared across the information page. */
+.information{font-size:15px;line-height:1.85;color:#343c47}.greetings{font-size:27px;line-height:1.55}.sectionTitle{font-size:16px;letter-spacing:.01em}.introLead{font-size:21px;line-height:1.7}.bold{font-size:16px;line-height:1.65}.content{font-size:15px;line-height:1.85}.introduce>div:last-child{min-width:0}.introduce div[style*="line-height"]{line-height:1.85!important}.introduce p[style*="font-size: 25px"]{font-size:22px!important;line-height:1.35;letter-spacing:-.025em}.introduce p[style*="font-size: 20px"]{font-size:18px!important;line-height:1.5}.etcLabel{font-size:16px}.etcDetails{font-size:15px}.profileNote{font-size:12px}
+@media(max-width:700px){.greetings{font-size:22px}.introLead{font-size:19px}.introduce p[style*="font-size: 25px"]{font-size:20px!important}}
+
+/* Use neutral text and reserve blue for navigation and small accents. */
+.container,.information{color:#2d333c}.sectionTitle{color:#303b4b}.information strong,.bold{color:#252c36}.content{color:#555e6b}.profileNote,.skill{color:#697482}.section hr,.line{border-color:#e2e6ec}.highlight{background:#eef3fa;color:inherit}.etcDetails summary{color:#315b9a}.information a:hover{color:#315b9a}
+
+.etcDetails summary {
+    color: #4b5563;
+    font-weight: 500;
+}
+
+.etcDetails summary:hover {
+    color: #252c36;
+}
+
+.etcDetails summary:focus-visible {
+    outline: 2px solid #315b9a;
+    outline-offset: 3px;
+}
+
+/* Keep emphasis subtle and limited to the introduction. */
+.introLead strong { color: #315b9a; font-weight: 700; }
+.introduce .content strong { color: #293c58; font-weight: 700; }
+
+/* Give introduction headings a clear hierarchy over regular body text. */
+.introduce .bold { font-size: 17px; font-weight: 700; color: #263e61; margin-top: 30px !important; margin-bottom: 8px !important; }
+.introduce .content { font-weight: 400; color: #505a68; line-height: 1.9; }
+.introLead { color: #2d333c; font-weight: 500; }
+
+.introduce .bold { color: #253349; font-size: 17px; font-weight: 750; }
+.introHighlight { color: inherit; background: linear-gradient(transparent 57%, #dceafb 57%); padding: 0 1px; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+
+/* Technology labels for the experience and featured project sections. */
+.projectSkills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin: 10px 0 16px;
+}
+
+.projectSkills .skill {
+    margin: 0;
+    padding: 3px 9px;
+    border: 0;
+    border-radius: 12px;
+    background: #f1f4f8;
+    color: #536273;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* Match technology labels inside the expandable work history. */
+.etcDetails details .skill {
+    display: inline-block;
+    margin: 2px 4px 2px 0;
+    padding: 3px 9px;
+    border: 0;
+    border-radius: 12px;
+    background: #f1f4f8;
+    color: #536273;
+    font-size: 12px;
+    line-height: 1.5;
+    vertical-align: baseline;
+}
+
+.highlight {
+    color: inherit;
+    background: linear-gradient(transparent 57%, #dceafb 57%);
+    border-radius: 0;
+    padding: 0 1px;
+    margin: 0;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+}

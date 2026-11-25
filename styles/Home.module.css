@@ -147,3 +147,9 @@
     flex-direction: column;
   }
 }
+.mainTitle{font-size:1.25rem;letter-spacing:-.035em;color:#28474a}.main{align-items:center;padding:1.8rem 0}.menus button{font-size:15px;padding:.5rem .2rem}.container>hr{border:0;border-top:1px solid #dce7e7}.menus button:hover,.activeMenu{text-decoration-thickness:2px;text-underline-offset:.6rem}
+
+.mainTitle{color:#283a55}.menus button:hover,.menus button:focus-visible,.activeMenu{color:#315fa8}.container>hr{border-color:#e0e6ef}
+
+/* A single blue for navigation and interactive states. */
+.mainTitle{color:#222c3a}.menus button:hover,.menus button:focus-visible,.activeMenu{color:#315b9a}.container>hr{border-color:#e3e7ed}

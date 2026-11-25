@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import styles from '../styles/Project.module.css';
 
 import { FaGithub } from "react-icons/fa";
@@ -198,81 +198,71 @@ const Projects = () => {
         return teamCondition && typeCondition && teamStatus && skillCondition;
       });
 
-      const [topValue, setTopValue] = useState(100); // 초기 top 값
-
-      const handleScroll = () => {
-        const scrollTop = Math.max(200,window.scrollY);
-        // 스크롤 위치에 따라 top 값을 업데이트
-        setTopValue(scrollTop-100);
-      };
-    
-      useEffect(() => {
-        // 컴포넌트가 마운트될 때와 스크롤 이벤트 등록
-        window.addEventListener('scroll', handleScroll);
-        return () => {
-          // 컴포넌트가 언마운트될 때 이벤트 제거
-          window.removeEventListener('scroll', handleScroll);
-        };
-      }, []); // 빈 배열은 컴포넌트가 마운트될 때 한 번만 실행되도록 함
-    
     return(
         <div className={styles.container}>
-            <i style={{fontSize:"12px", textAlign:"center"}}>*개인·팀 프로젝트를 작업 근거와 함께 정리했습니다.<br/>제목에 💫표시가 있는 프로젝트는 Information 페이지의 <strong>대표 프로젝트</strong>입니다.<br/>(last update: 2026.11.07) </i>
+            <div className={styles.projectNote}>*개인·팀 프로젝트를 작업 근거와 함께 정리했습니다.<br/>제목에 💫표시가 있는 프로젝트는 Information 페이지의 <strong>대표 프로젝트</strong>입니다.<br/>(last update: 2026.11.07)</div>
             
                 <div className={styles.introduce}>
                     <div className={styles.sectionLeft}> 
-                        <div style={{position:"relative", top:`${topValue}px`, left:"-15px"}}>
-                        <div style={{minWidth:"150px",  backgroundColor:"rgba(243,243,243,70)", borderRadius:"5px", padding:"20px 0px"}}>
-                            <div style={{textAlign:"center"}}>
-                                <span style={{fontSize:"15px"}}>🏷️ Filter</span>
-                                <p/>
-                            <div>
-                                {['팀', '개인'].map((team) => (
-                                    <button className={styles.category} key={team} onClick={()=>handleTeamClick(team)} style={{fontWeight:selectedTeam===team?'bold':'normal', backgroundColor:selectedTeam==team?'#b0e8ea':'#caebec'}}>{team}</button>
-                                ))}
+                        <div className={styles.filterPanel}>
+                        <div className={styles.filterBox}>
+                            <div className={styles.filterHeading}>Filter</div>
+                            <div className={styles.filterGroup} role="group" aria-label="프로젝트 구성">
+                                <div className={styles.filterLabel}>구성</div>
+                                <div className={styles.filterOptions}>
+                                    {['팀', '개인'].map((team) => (
+                                        <button className={styles.category} key={team} onClick={() => handleTeamClick(team)} aria-pressed={selectedTeam === team}>{team}</button>
+                                    ))}
+                                </div>
                             </div>
-                            <hr width="80%" style={{border: "1px solid rgba(197 197 197,60)"}}/>
-                            <div>
-                                {['App', 'Web', 'Etc'].map((type) => (
-                                    <button className={styles.category} key={type} onClick={()=>handleTypeClick(type)} style={{fontWeight:selectedType===type?'bold':'normal', backgroundColor:selectedType==type?'#b0e8ea':'#caebec'}}>{type}</button>
-                                ))}
+                            <div className={styles.filterGroup} role="group" aria-label="프로젝트 유형">
+                                <div className={styles.filterLabel}>유형</div>
+                                <div className={styles.filterOptions}>
+                                    {['App', 'Web', 'Etc'].map((type) => (
+                                        <button className={styles.category} key={type} onClick={() => handleTypeClick(type)} aria-pressed={selectedType === type}>{type}</button>
+                                    ))}
+                                </div>
                             </div>
-                            <hr width="80%" style={{border: "1px solid rgba(197 197 197,60)"}}/>
-                            <div>
-                                {['ing', 'done'].map((status) => (
-                                    <button className={styles.category} key={status} onClick={()=>handleStatusClick(status)} style={{fontWeight:selectedStatus===status?'bold':'normal', backgroundColor:selectedStatus==status?'#b0e8ea':'#caebec'}}>{status}</button>
-                                ))}
+                            <div className={styles.filterGroup} role="group" aria-label="프로젝트 상태">
+                                <div className={styles.filterLabel}>상태</div>
+                                <div className={styles.filterOptions}>
+                                    {['ing', 'done'].map((status) => (
+                                        <button className={styles.category} key={status} onClick={() => handleStatusClick(status)} aria-pressed={selectedStatus === status}>{status}</button>
+                                    ))}
+                                </div>
                             </div>
-                            <hr width="80%" style={{border: "1px solid rgba(197 197 197,60)"}}/>
-                            </div>
-                            <div style={{position:"relative", top:"10px", textAlign:"center"}}>
-                                {['Spring Boot', 'Java', 'Kotlin', 'NestJS', 'TypeScript', 'JavaScript','Next.js','express.js','React', 'Flask','Python','C', 'C++','Cuda','Go','MySQL','MongoDB','SQLite','PostgreSQL','AWS','Docker','k8s'].map((skills) => (
-                                    <button className={styles.categoryskill} key={skills} onClick={()=>handleSkillsClick(skills)} style={{fontWeight:selectedSkills.includes(skills)?'bold':'normal', backgroundColor:selectedSkills.includes(skills)?'':''}}>{skills}</button>
-                                ))}
+                            <div className={styles.filterGroup} role="group" aria-label="기술 스택">
+                                <div className={styles.filterLabel}>기술 스택</div>
+                                <div className={styles.filterOptions}>
+                                    {['Spring Boot', 'Java', 'Kotlin', 'NestJS', 'TypeScript', 'JavaScript', 'Next.js', 'express.js', 'React', 'Flask', 'Python', 'C', 'C++', 'Cuda', 'Go', 'MySQL', 'MongoDB', 'SQLite', 'PostgreSQL', 'AWS', 'Docker', 'k8s'].map((skill) => (
+                                        <button className={styles.categoryskill} key={skill} onClick={() => handleSkillsClick(skill)} aria-pressed={selectedSkills.includes(skill)}>{skill}</button>
+                                    ))}
+                                </div>
                             </div>
                         </div>
                         <p/>
                         <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} style={{borderRadius:"50%", height:"35px", border:"0px"}}>Top</button>
                         </div>
                     </div>
-                    <div style={{flexGrow:"1", marginLeft:"20px", minWidth:"0", wordWrap:"break-word"}}>
+                    <div className={styles.projectList}>
                         {filteredProjects.map((project) => (
 
 
-                            <div key={project.name} style={{marginTop:"3rem", display:"flex"}}>
-                                <div style={{width:"25%"}}>
+                            <div key={project.name} className={styles.projectRow}>
+                                <div className={styles.projectMeta}>
                                     {project.image?(<img style={{width:"50%"}} src={project.image}/>):null}
-                                    <p style={{fontWeight:"bolder", fontSize:"25px", marginBottom:"1rem",wordWrap:"break-word"}}>
+                                    <p className={styles.projectTitle}>
                                     {project.name}
                                     </p>
-                                    <span className={styles.status}>{project.status}</span><br/>
-                                    {project.part?(<span>{project.part} <span style={{fontSize:"12px"}}>{project.projectDescription} <br/>{project.contribution}</span></span>):null}
+                                    <div className={styles.metaDetails}><span className={styles.status}>{project.status}</span><br/>
+                                    {project.part?(<span className={styles.projectRole}>{project.part} <span className={styles.projectDetail}>{project.projectDescription} <br/>{project.contribution}</span></span>):null}
                                     
-                                    <p style={{fontSize:"12px"}}>{project.date}<br/>{project.belong}</p>
-                                    <div style={{display:"flex",gap:"2px", flexWrap:"wrap", marginBottom:"5px"}}>
+                                    <p className={styles.projectDate}>{project.date}<br/>{project.belong}</p>
+                                    <div className={styles.projectSkills}>
                                         {project.skills.map((skill, index) => (
                                             <p key={index} className={styles.skill}>{skill}</p>
                                         ))}
+                                    </div>
                                     </div>
                                         {project.github?(<a href={project.github} target="_blank"><FaGithub/>&nbsp;</a>):null}
                                         {project.blog?(<a href={project.blog} target="_blank"><SiVelog/>&nbsp;</a>):null}
@@ -283,7 +273,7 @@ const Projects = () => {
                                     
                                 </div>
                                 <div className={styles.line}></div>
-                                <div style={{padding:"1rem", lineHeight:"1.5em", width:"70%", alignSelf:"center"}}dangerouslySetInnerHTML={{ __html: project.description}}>
+                                <div className={styles.projectDescription} dangerouslySetInnerHTML={{ __html: project.description}}>
                                 </div>
                             </div>
                         ))}

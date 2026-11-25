@@ -106,3 +106,203 @@
     border-radius:2px;
      margin:0.05rem;
 }
+.container{color:#292d32;overflow:visible}.projectIntro{margin:16px 0 22px}.projectIntro h2{font-size:23px;letter-spacing:-.035em;margin:0 0 12px}.projectIntro p{font-size:14px;line-height:1.8;color:#737981}.projectRow{display:flex;padding:38px 0;border-bottom:1px solid #e3e5e8;align-items:flex-start}.projectRow:first-child{padding-top:20px}.projectRow>div:first-child{flex-shrink:0}.projectDescription{padding:0 0 0 12px;width:70%;font-size:15px;line-height:1.9;color:#525860;word-break:keep-all}.projectDescription section{margin-top:25px}.projectDescription h3{font-size:16px;color:#292d32;line-height:1.6;margin:0 0 8px}.projectDescription p{margin:0 0 12px}.projectDescription strong{color:#292d32}.caseSummary{font-size:17px;color:#292d32;line-height:1.85}.caseResult{border-left:2px solid #187b80;padding:4px 0 4px 12px;font-size:14px;font-weight:700;color:#176c70}.line{border-color:#e2e4e7;border-width:1px;margin:0 16px;align-self:stretch}.skill{background:#f3f4f5;color:#555c65;border:1px solid #e3e5e8;padding:3px 6px}.status{background:#f0f1f3;color:#646b74}.filterPanel{position:sticky;top:24px}.category,.categoryskill{height:auto;padding:5px 8px;background:#fff;border:1px solid #dfe2e5;color:#60656d;cursor:pointer}.category[aria-pressed="true"],.categoryskill[aria-pressed="true"]{background:#e8f3f2;color:#176c70;border-color:#71a6a8;font-weight:700}.category:hover,.categoryskill:hover{border-color:#71a6a8}.category:focus-visible,.categoryskill:focus-visible{outline:2px solid #187b80;outline-offset:2px}
+@media(max-width:700px){.container{padding:1.5rem 0}.introduce{display:block}.sectionLeft{width:100%;padding:0;min-width:0}.filterPanel{position:static}.projectRow{display:block}.projectRow>div:first-child,.projectDescription{width:100%!important}.projectDescription{padding:20px 0 0}.line{display:none}.introduce>div:last-child{margin-left:0!important}.projectIntro h2{font-size:21px}}
+
+/* Give each column an explicit share; padding cannot consume its neighbour. */
+.introduce{display:grid;grid-template-columns:170px minmax(0,1fr);gap:28px;align-items:start}.sectionLeft{box-sizing:border-box;width:auto;min-width:0;padding:0;align-self:stretch}.filterPanel{width:100%}.projectList{min-width:0}.projectRow{display:grid;grid-template-columns:190px minmax(0,1fr);gap:24px}.projectRow>div:first-child{width:auto!important;min-width:0}.projectRow>.line{display:none}.projectDescription{box-sizing:border-box;width:auto;min-width:0;padding:0 0 0 24px;border-left:1px solid #e2e4e7}.projectRow>div:first-child>p:first-of-type{font-size:23px!important;overflow-wrap:anywhere}
+@media(max-width:1000px) and (min-width:851px){.introduce{grid-template-columns:150px minmax(0,1fr);gap:20px}.projectRow{grid-template-columns:145px minmax(0,1fr);gap:16px}.projectDescription{padding-left:16px}}
+@media(max-width:850px){.introduce{display:block}.sectionLeft{width:100%}.filterPanel{position:static}.projectRow{grid-template-columns:155px minmax(0,1fr);gap:18px}.projectDescription{padding-left:18px}.projectList{margin:0}}
+@media(max-width:600px){.projectRow{display:block}.projectDescription{width:100%;border-left:0;padding:20px 0 0}.projectRow>div:first-child{width:100%!important}}
+
+.category[aria-pressed="true"],.categoryskill[aria-pressed="true"]{background:#e9f1ff;color:#244f94;border-color:#94afd9}.category:hover,.categoryskill:hover{border-color:#94afd9}.category:focus-visible,.categoryskill:focus-visible{outline-color:#315fa8}.highlight{background:#e9f1ff;color:#244f94}
+
+.projectNote{font-size:13px;line-height:1.7;color:#646b75;margin:8px 0 20px}.projectNote span{margin-left:10px}.projectNote .updated{color:#8a919b;font-size:12px}.skill{display:inline-block;background:none;border:0;border-radius:0;padding:0;margin:0 10px 4px 0;color:#6a7482;font-size:12px;line-height:1.5}.status{background:none;padding:0;color:#7a8492;font-size:12px}.category,.categoryskill{background:transparent;border:0;border-radius:2px;color:#626b77;padding:4px 6px;line-height:1.4}.category[aria-pressed="true"],.categoryskill[aria-pressed="true"]{background:#e5edf9;color:#28538e;font-weight:700}.category:hover,.categoryskill:hover{background:#e9edf3}.filterHeading{font-size:14px;font-weight:700;color:#414b59}.filterPanel hr{border:0!important;border-top:1px solid #d9dde3!important}.projectRow>div:first-child>p:first-of-type{line-height:1.35}.projectDescription{line-height:1.85}
+@media(max-width:700px){.projectNote span{display:block;margin-left:0}}
+
+/* Establish a clear type scale for project titles, metadata and descriptions. */
+.projectNote{font-size:12px;line-height:1.7;color:#777f8a;text-align:center;margin:4px 0 20px}.projectMeta{font-size:14px;line-height:1.6;color:#515a67}.projectRow .projectMeta .projectTitle{font-size:21px!important;font-weight:700;line-height:1.35;letter-spacing:-.025em;color:#262c35;margin:0 0 14px;overflow-wrap:normal;word-break:keep-all}.projectRole{font-size:14px;font-weight:600;color:#3c4654}.projectDetail{font-size:12px;font-weight:400;color:#7b8491}.projectDate{font-size:12px;color:#7b8491;line-height:1.65;margin:12px 0}.projectDescription{font-size:15px;line-height:1.85;color:#48515e}.status{font-size:12px;color:#818995}.skill{font-size:12px;color:#6b7684}
+
+/* Match the information page: neutral text, blue for selection. */
+.filterBox{min-width:0;background:#f6f7f9;border:1px solid #e6e9ee;border-radius:4px;padding:20px 0}.container{color:#2d333c}.projectDescription{color:#48515d}.projectTitle{color:#252c36}.projectDate,.projectDetail,.status,.skill{color:#697482}.filterHeading{color:#343e4c}.filterPanel hr{border-color:#e1e5eb!important}.category,.categoryskill{color:#566170}.category:hover,.categoryskill:hover{background:#e9edf3;color:#303b4b}.category[aria-pressed="true"],.categoryskill[aria-pressed="true"]{background:#e7eef9;color:#315b9a}.category:focus-visible,.categoryskill:focus-visible{outline-color:#315b9a}.highlight{background:#eef3fa;color:inherit}
+
+/* Group project metadata and make the filters recognizable controls. */
+.projectRow .projectMeta .projectTitle{margin-bottom:15px}.metaDetails{border-top:1px solid #d9dee6;padding-top:14px;margin-bottom:14px}.status{display:inline-block;font-size:11px;letter-spacing:.03em;color:#657183;margin-bottom:5px}.projectRole{display:inline-block;font-size:14px;color:#303946}.projectDate{margin:11px 0 13px;color:#677180}.projectSkills{display:flex;flex-wrap:wrap;gap:5px 0;padding-top:11px;border-top:1px solid #e7e9ed}.projectSkills .skill{font-size:12px;margin:0;color:#4e5c6c}.projectSkills .skill:not(:last-child)::after{content:"·";color:#a3acb7;margin:0 7px}.filterBox{padding:18px 14px;text-align:left}.filterHeading{font-size:15px;color:#303946;margin-bottom:15px}.filterGroup{border-top:1px solid #e0e4e9;padding:13px 0}.filterGroup:last-child{padding-bottom:0}.filterLabel{font-size:11px;font-weight:700;color:#7a8491;margin-bottom:8px}.filterOptions{display:flex;flex-wrap:wrap;gap:5px}.category,.categoryskill{margin:0;padding:4px 7px;font-size:12px;line-height:1.4;background:#fff;border:1px solid #d7dde5;border-radius:3px;color:#4f5b6a}.category:hover,.categoryskill:hover{background:#eef2f7;border-color:#aebbc9}.category[aria-pressed="true"],.categoryskill[aria-pressed="true"]{background:#e8eff9;border-color:#6d8fbe;color:#264e84}.filterPanel>p{margin:10px 0}.filterPanel>button{cursor:pointer;color:#596575;background:#eff1f4}
+@media(max-width:600px){.metaDetails{max-width:100%}.filterOptions{gap:6px}.filterGroup{padding:11px 0}}
+
+/* Keep the filter and project details light and easy to scan. */
+.filterBox {
+    background: #f7f8fa;
+    border: 0;
+    border-radius: 6px;
+    padding: 20px 16px;
+}
+
+.filterGroup {
+    border: 0;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.filterLabel {
+    color: #7b8593;
+    font-size: 11px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.filterOptions {
+    gap: 5px 6px;
+}
+
+.category,
+.categoryskill {
+    background: transparent;
+    border: 0;
+    border-radius: 4px;
+    padding: 4px 6px;
+    color: #526071;
+}
+
+.category:hover,
+.categoryskill:hover {
+    background: #e9edf3;
+}
+
+.category[aria-pressed="true"],
+.categoryskill[aria-pressed="true"] {
+    background: #e3ebf7;
+    color: #315b9a;
+}
+
+.metaDetails {
+    border: 0;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.projectSkills {
+    border: 0;
+    padding-top: 0;
+    margin-top: 14px;
+}
+
+.status {
+    margin-bottom: 5px;
+}
+
+.projectDate {
+    margin: 12px 0 0;
+}
+
+/* Soft separators retain structure without enclosing every item. */
+.metaDetails {
+    position: relative;
+    padding-top: 14px;
+}
+
+.metaDetails::before {
+    content: "";
+    display: block;
+    width: 36px;
+    height: 2px;
+    background: #d9e2ee;
+    border-radius: 2px;
+    margin-bottom: 12px;
+}
+
+.projectSkills {
+    gap: 5px;
+    margin-top: 15px;
+}
+
+.projectSkills .skill {
+    padding: 3px 7px;
+    background: #f1f4f8;
+    border-radius: 3px;
+    color: #536273;
+}
+
+.projectSkills .skill:not(:last-child)::after {
+    content: none;
+}
+
+.filterGroup + .filterGroup {
+    border-top: 1px solid #e4e8ee;
+    padding-top: 15px;
+    margin-top: 15px;
+}
+
+.category,
+.categoryskill {
+    background: #fff;
+    box-shadow: inset 0 0 0 1px #e5e9ef;
+}
+
+.category:hover,
+.categoryskill:hover {
+    background: #edf2f8;
+}
+
+.category[aria-pressed="true"],
+.categoryskill[aria-pressed="true"] {
+    background: #e3ebf7;
+    box-shadow: inset 0 0 0 1px #aabedb;
+    color: #315b9a;
+}
+
+.filterBox {
+    border-radius: 12px;
+}
+
+.category,
+.categoryskill {
+    border-radius: 12px;
+    padding: 5px 9px;
+}
+
+.filterOptions {
+    gap: 6px;
+}
+
+.projectSkills .skill {
+    border-radius: 12px;
+    padding: 3px 9px;
+}
+
+/* Keep project separation understated and restore the filter shape. */
+.projectRow {
+    border-bottom: 1px solid #edf0f4;
+}
+
+.category,
+.categoryskill {
+    border-radius: 4px;
+    padding: 4px 6px;
+}
+
+.filterOptions {
+    gap: 5px 6px;
+}
+
+/* Restore the original project separator. */
+.projectRow {
+    position: static;
+    border-bottom: 1px solid #e3e5e8;
+    background: transparent;
+    border-radius: 0;
+    padding: 38px 0;
+    margin: 0;
+}
+.projectRow:first-child { padding-top: 20px; }
+.projectRow:not(:last-child)::after { content: none; }
+
+.highlight {
+    color: inherit;
+    background: linear-gradient(transparent 57%, #dceafb 57%);
+    border-radius: 0;
+    padding: 0 1px;
+    margin: 0;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+}
